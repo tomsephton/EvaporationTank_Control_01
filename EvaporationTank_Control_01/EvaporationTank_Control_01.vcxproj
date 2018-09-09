@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{92A195E3-AD34-47E7-992F-8276A37DDE1B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EvaporationTank_Control_01</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>.\LIB;$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;opengl32.lib;glu32.lib;glaux.lib;DaqX.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="EvaporationTank_Control_01.ico" />
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnalogInput.h" />
+    <ClInclude Include="AnalogOutput.h" />
+    <ClInclude Include="AnalogSensor.h" />
+    <ClInclude Include="BinaryInput.h" />
+    <ClInclude Include="BinaryOutput.h" />
+    <ClInclude Include="BinarySensor.h" />
+    <ClInclude Include="DaqDevice.h" />
+    <ClInclude Include="DaqRoutines.h" />
+    <ClInclude Include="Daqx.h" />
+    <ClInclude Include="DBK15.h" />
+    <ClInclude Include="DBK23.h" />
+    <ClInclude Include="DBK5.h" />
+    <ClInclude Include="DistillateSupplyTank.h" />
+    <ClInclude Include="EvaporationTankA.h" />
+    <ClInclude Include="EvaporationTankB.h" />
+    <ClInclude Include="EvaporationTank_Control_01.h" />
+    <ClInclude Include="LevelSensor.h" />
+    <ClInclude Include="LevelSwitch.h" />
+    <ClInclude Include="LiquidTank.h" />
+    <ClInclude Include="LogData.h" />
+    <ClInclude Include="LogFileOutput.h" />
+    <ClInclude Include="MathUtilities.h" />
+    <ClInclude Include="MeteringPump.h" />
+    <ClInclude Include="ProcessErrors.h" />
+    <ClInclude Include="ProgramException.h" />
+    <ClInclude Include="ProgramExceptions.h" />
+    <ClInclude Include="PumpLogFileOutput.h" />
+    <ClInclude Include="Pyranometer.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Sensor.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemTime.h" />
+    <ClInclude Include="TankFillLogFileOutput.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TemperatureProbe.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnalogInput.cpp" />
+    <ClCompile Include="AnalogOutput.cpp" />
+    <ClCompile Include="AnalogSensor.cpp" />
+    <ClCompile Include="BinaryInput.cpp" />
+    <ClCompile Include="BinaryOutput.cpp" />
+    <ClCompile Include="BinarySensor.cpp" />
+    <ClCompile Include="DaqDevice.cpp" />
+    <ClCompile Include="DaqRoutines.cpp" />
+    <ClCompile Include="DBK15.cpp" />
+    <ClCompile Include="DBK23.cpp" />
+    <ClCompile Include="DBK5.cpp" />
+    <ClCompile Include="DistillateSupplyTank.cpp" />
+    <ClCompile Include="EvaporationTankA.cpp" />
+    <ClCompile Include="EvaporationTankB.cpp" />
+    <ClCompile Include="EvaporationTank_Control_01.cpp" />
+    <ClCompile Include="LevelSensor.cpp" />
+    <ClCompile Include="LevelSwitch.cpp" />
+    <ClCompile Include="LiquidTank.cpp" />
+    <ClCompile Include="LogData.cpp" />
+    <ClCompile Include="LogFileOutput.cpp" />
+    <ClCompile Include="MathUtilities.cpp" />
+    <ClCompile Include="MeteringPump.cpp" />
+    <ClCompile Include="ProcessErrors.cpp" />
+    <ClCompile Include="ProgramException.cpp" />
+    <ClCompile Include="ProgramExceptions.cpp" />
+    <ClCompile Include="PumpLogFileOutput.cpp" />
+    <ClCompile Include="Pyranometer.cpp" />
+    <ClCompile Include="Sensor.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SystemTime.cpp" />
+    <ClCompile Include="TankFillLogFileOutput.cpp" />
+    <ClCompile Include="TemperatureProbe.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EvaporationTank_Control_01.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="LIB\DAQX.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
